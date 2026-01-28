@@ -23,7 +23,6 @@ content="Austin Stewart #1 SQL Worldwide, Health Analytics and Automation. Pytho
 --accent:#6aa9ff;
 --accent2:#4affc0;
 --shadow:0 35px 120px rgba(0,0,0,.75);
---radius:26px;
 --max:1280px;
 }
 
@@ -46,6 +45,7 @@ margin:auto;
 padding:50px 24px 90px;
 }
 
+/* HERO */
 .heroCard{
 backdrop-filter:blur(28px);
 background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03));
@@ -53,8 +53,6 @@ border:1px solid var(--border);
 border-radius:36px;
 box-shadow:var(--shadow);
 padding:56px;
-position:relative;
-overflow:hidden;
 }
 
 .heroImage{
@@ -100,7 +98,7 @@ margin-top:30px;
 }
 
 .btn{
-padding:16px 26px;
+padding:14px 22px;
 border-radius:18px;
 border:1px solid var(--border);
 background:rgba(255,255,255,.06);
@@ -108,12 +106,13 @@ font-weight:700;
 text-decoration:none;
 color:var(--text);
 transition:.3s;
+display:inline-block;
 }
 
 .btn:hover{
-transform:translateY(-4px) scale(1.03);
+transform:translateY(-3px);
 border-color:var(--accent);
-box-shadow:0 20px 60px rgba(106,169,255,.4);
+box-shadow:0 18px 50px rgba(106,169,255,.4);
 }
 
 .primary{
@@ -121,6 +120,7 @@ background:linear-gradient(120deg,var(--accent),var(--accent2));
 color:#02131f;
 }
 
+/* STATS */
 .stats{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -141,6 +141,7 @@ font-size:40px;
 display:block;
 }
 
+/* SECTIONS */
 section{margin-top:90px}
 
 .sectionTitle{
@@ -154,6 +155,7 @@ grid-template-columns:repeat(3,1fr);
 gap:28px;
 }
 
+/* CARDS */
 .card{
 background:var(--glass);
 border:1px solid var(--border);
@@ -161,20 +163,34 @@ border-radius:28px;
 padding:28px;
 box-shadow:var(--shadow);
 transition:.35s;
+display:flex;
+flex-direction:column;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 border-color:var(--accent);
 }
 
-.meta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.meta{
+margin-top:auto;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
 
 .tag{
 font-size:13px;
 padding:7px 10px;
 border-radius:999px;
 border:1px solid var(--border);
+}
+
+.cardActions{
+display:flex;
+gap:12px;
+margin-top:22px;
+flex-wrap:wrap;
 }
 
 .badgeRestricted{
@@ -188,10 +204,12 @@ display:inline-block;
 margin-bottom:12px;
 }
 
+/* OPEN PROJECT VISUAL DIFFERENCE */
 #open-projects .card{
 border-color:rgba(74,255,192,.35);
 }
 
+/* FOOTER */
 footer{
 margin-top:110px;
 text-align:center;
@@ -211,6 +229,7 @@ padding-top:26px;
 <body>
 <div class="wrap">
 
+<!-- HERO -->
 <div class="heroCard">
 <img src="BannerImage.jpg" class="heroImage">
 
@@ -230,37 +249,59 @@ on HackerRank.
 </div>
 
 <div class="stats">
-<div class="stat"><strong>4,000+</strong>Automations</div>
+<div class="stat"><strong>4,000+</strong>Recipients Automated</div>
 <div class="stat"><strong>#1</strong>SQL Rank</div>
-<div class="stat"><strong>50+</strong>Years Data</div>
+<div class="stat"><strong>50+</strong>Years Digitized</div>
 <div class="stat"><strong>1000s</strong>Hours Saved</div>
 </div>
 </div>
 
+<!-- RESTRICTED PROJECTS -->
 <section id="projects">
 <h2 class="sectionTitle">Featured Healthcare Automation Projects</h2>
 
 <div class="grid">
+
 <div class="card">
 <span class="badgeRestricted">Code Restricted</span>
 <h3>Medicaid Repayment Automation</h3>
-<p>Python-based automation processing Medicaid repayments for 4,000+ individuals.</p>
+<p>Automated Medicaid repayment processing for over 4,000 individuals.</p>
+<div class="meta">
+<span class="tag">Python</span><span class="tag">Pandas</span>
+</div>
+<div class="cardActions">
+<a class="btn" href="medicaid-repayment-case-study.html">View Case Study</a>
+</div>
 </div>
 
 <div class="card">
 <span class="badgeRestricted">Code Restricted</span>
 <h3>50-Year Data Digitization</h3>
-<p>Migrated half a century of Medicaid data into modern analytics systems.</p>
+<p>Migrated half a century of Medicaid records into analytics-ready systems.</p>
+<div class="meta">
+<span class="tag">SQL</span><span class="tag">ETL</span>
+</div>
+<div class="cardActions">
+<a class="btn" href="data-digitization-case-study.html">View Case Study</a>
+</div>
 </div>
 
 <div class="card">
 <span class="badgeRestricted">Code Restricted</span>
 <h3>ServiceNow PDF Automation</h3>
-<p>Automated PDF workflows replacing manual government processes.</p>
+<p>Built automated PDF workflows replacing manual government processing.</p>
+<div class="meta">
+<span class="tag">ServiceNow</span><span class="tag">Automation</span>
 </div>
+<div class="cardActions">
+<a class="btn" href="servicenow-pdf-case-study.html">View Case Study</a>
+</div>
+</div>
+
 </div>
 </section>
 
+<!-- OPEN PROJECTS -->
 <section id="open-projects">
 <h2 class="sectionTitle">Open-Source Healthcare Analytics Projects</h2>
 
@@ -269,33 +310,41 @@ on HackerRank.
 <div class="card">
 <h3>Healthcare Workforce & Burnout Analytics</h3>
 <p>
-Analyzes burnout risk among healthcare workers using workload, role, and stress
-indicators. Designed for remote healthcare ops teams.
+Analyzes burnout risk across healthcare roles using workload, experience,
+stress, and sleep indicators. Designed for remote operations teams.
 </p>
 <div class="meta">
 <span class="tag">SQL</span><span class="tag">Excel</span>
 <span class="tag">Power BI</span>
 </div>
+<div class="cardActions">
 <a class="btn primary" href="https://github.com/austinstewartmsda-stack/healthcare-burnout-analytics">View Code</a>
+<a class="btn" href="burnout-case-study.html">View Case Study</a>
+</div>
 </div>
 
 <div class="card">
 <h3>Public Health Resource Allocation & Outcomes</h3>
 <p>
-Policy-focused analysis of healthcare access and outcomes across regions,
-highlighting equity gaps and investment priorities.
+Policy-focused analysis examining healthcare access and outcomes across regions
+to identify equity gaps and investment priorities.
 </p>
 <div class="meta">
 <span class="tag">SQL</span><span class="tag">Power BI</span>
 <span class="tag">Public Health</span>
 </div>
+<div class="cardActions">
 <a class="btn primary" href="https://github.com/austinstewartmsda-stack/public-health-resource-allocation">View Code</a>
+<a class="btn" href="resource-allocation-case-study.html">View Case Study</a>
+</div>
 </div>
 
 </div>
 </section>
 
-<footer>© <span id="year"></span> Austin Stewart</footer>
+<footer>
+© <span id="year"></span> Austin Stewart
+</footer>
 
 </div>
 
