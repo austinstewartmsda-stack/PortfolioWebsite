@@ -7,16 +7,14 @@
 <title>Austin Stewart, MSDA Health Data Analytics</title>
 
 <meta name="description"
-content="Austin Stewart #1 SQL Worldwide, Health Analytics and Automation. Python, Pandas, Snowflake, ServiceNow, Tableau, Power BI." />
+content="Austin Stewart #1 SQL Worldwide, Health Analytics and Automation. Python, Pandas, ServiceNow, Tableau, Power BI." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
-
-
-:root {
+:root{
 --bg:#050814;
 --glass:rgba(255,255,255,.09);
 --border:rgba(255,255,255,.16);
@@ -28,7 +26,6 @@ content="Austin Stewart #1 SQL Worldwide, Health Analytics and Automation. Pytho
 --radius:26px;
 --max:1280px;
 }
-
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,8 +46,6 @@ margin:auto;
 padding:50px 24px 90px;
 }
 
-
-
 .heroCard{
 backdrop-filter:blur(28px);
 background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03));
@@ -62,39 +57,14 @@ position:relative;
 overflow:hidden;
 }
 
-.heroCard::after{
-content:"";
-position:absolute;
-inset:-2px;
-background:
-linear-gradient(120deg,
-transparent 40%,
-rgba(106,169,255,.35),
-rgba(74,255,192,.35),
-transparent 60%);
-opacity:.35;
-pointer-events:none;
-}
-
-.heroImageWrap{
-display:flex;
-justify-content:center;
-margin-bottom:36px;
-}
-
 .heroImage{
 width:100%;
 max-width:900px;
 border-radius:32px;
 border:1px solid var(--border);
 box-shadow:0 60px 160px rgba(0,0,0,.85);
-animation:float 10s ease-in-out infinite;
+margin-bottom:36px;
 }
-
-@keyframes float{
-50%{transform:translateY(-12px)}
-}
-
 
 .kicker{
 display:inline-flex;
@@ -122,8 +92,6 @@ max-width:78ch;
 color:var(--muted);
 }
 
-
-
 .ctaRow{
 display:flex;
 gap:18px;
@@ -138,8 +106,8 @@ border:1px solid var(--border);
 background:rgba(255,255,255,.06);
 font-weight:700;
 text-decoration:none;
+color:var(--text);
 transition:.3s;
-display:inline-block;
 }
 
 .btn:hover{
@@ -152,7 +120,6 @@ box-shadow:0 20px 60px rgba(106,169,255,.4);
 background:linear-gradient(120deg,var(--accent),var(--accent2));
 color:#02131f;
 }
-
 
 .stats{
 display:grid;
@@ -174,11 +141,7 @@ font-size:40px;
 display:block;
 }
 
-
-
-section{
-margin-top:80px;
-}
+section{margin-top:90px}
 
 .sectionTitle{
 font-size:38px;
@@ -191,8 +154,6 @@ grid-template-columns:repeat(3,1fr);
 gap:28px;
 }
 
-
-
 .card{
 background:var(--glass);
 border:1px solid var(--border);
@@ -200,26 +161,12 @@ border-radius:28px;
 padding:28px;
 box-shadow:var(--shadow);
 transition:.35s;
-opacity:1;
-transform:none;
-}
-
-
-.card.reveal{
-opacity:0;
-transform:translateY(24px);
-}
-
-.card.visible{
-opacity:1;
-transform:none;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.015);
+transform:translateY(-10px);
 border-color:var(--accent);
 }
-
 
 .meta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
 
@@ -229,8 +176,6 @@ padding:7px 10px;
 border-radius:999px;
 border:1px solid var(--border);
 }
-
-
 
 .badgeRestricted{
 background:linear-gradient(120deg,#ffb86c,#ff6b6b);
@@ -243,7 +188,9 @@ display:inline-block;
 margin-bottom:12px;
 }
 
-
+#open-projects .card{
+border-color:rgba(74,255,192,.35);
+}
 
 footer{
 margin-top:110px;
@@ -253,194 +200,107 @@ border-top:1px solid var(--border);
 padding-top:26px;
 }
 
-
 @media(max-width:900px){
 .grid{grid-template-columns:1fr}
 .stats{grid-template-columns:1fr 1fr}
 .heroCard{padding:34px}
 }
-
 </style>
 </head>
 
 <body>
 <div class="wrap">
 
-
-
 <div class="heroCard">
+<img src="BannerImage.jpg" class="heroImage">
 
-<div class="heroImageWrap">
-<img src="BannerImage.jpg"
-alt="Austin Stewart analytics banner"
-class="heroImage">
-</div>
-
-<div class="kicker">
-<span class="dot"></span>
-<span>Health Analytics • Automation Architect • #1 SQL Worldwide</span>
-</div>
+<div class="kicker"><span class="dot"></span>Health Analytics • Automation • #1 SQL Worldwide</div>
 
 <h1>Austin Stewart, MSDA</h1>
 
 <p class="sub">
-Health Data Analytics developer at Montana DPHHS specializing in large-scale
-automation, BI dashboards, and healthcare systems. Ranked #1 worldwide
-in SQL on HackerRank. Built Python pipeline automating Medicaid repayments
-for 4,000+ individuals, digitized half a century of government records into
-Snowflake for the deparment of agriculture, and replaced manual workflows with ServiceNow-powered PDF automation.
+Health Data Analytics developer at Montana DPHHS specializing in healthcare
+automation, BI dashboards, and government systems. Ranked #1 worldwide in SQL
+on HackerRank.
 </p>
 
 <div class="ctaRow">
 <a class="btn primary" href="https://github.com/austinstewartmsda-stack">GitHub</a>
 <a class="btn" href="#projects">Flagship Work</a>
-<a class="btn" href="#contact">Contact</a>
 </div>
 
 <div class="stats">
-<div class="stat"><strong>4,000+</strong>Recipients Automated</div>
+<div class="stat"><strong>4,000+</strong>Automations</div>
 <div class="stat"><strong>#1</strong>SQL Rank</div>
-<div class="stat"><strong>50+ yrs</strong>Data Migrated</div>
+<div class="stat"><strong>50+</strong>Years Data</div>
 <div class="stat"><strong>1000s</strong>Hours Saved</div>
 </div>
-
 </div>
-
-
 
 <section id="projects">
-
 <h2 class="sectionTitle">Featured Healthcare Automation Projects</h2>
 
-<p class="sub" style="max-width:70ch">
-Due to HIPAA and government system policies, source code for these projects
-cannot be published publicly. Each case study focuses on architecture,
-technical approach, and measurable outcomes.
-</p>
+<div class="grid">
+<div class="card">
+<span class="badgeRestricted">Code Restricted</span>
+<h3>Medicaid Repayment Automation</h3>
+<p>Python-based automation processing Medicaid repayments for 4,000+ individuals.</p>
+</div>
+
+<div class="card">
+<span class="badgeRestricted">Code Restricted</span>
+<h3>50-Year Data Digitization</h3>
+<p>Migrated half a century of Medicaid data into modern analytics systems.</p>
+</div>
+
+<div class="card">
+<span class="badgeRestricted">Code Restricted</span>
+<h3>ServiceNow PDF Automation</h3>
+<p>Automated PDF workflows replacing manual government processes.</p>
+</div>
+</div>
+</section>
+
+<section id="open-projects">
+<h2 class="sectionTitle">Open-Source Healthcare Analytics Projects</h2>
 
 <div class="grid">
 
 <div class="card">
-
-<span class="badgeRestricted">🔒 Code Restricted</span>
-
-<h3>Medicaid Repayment Automation </h3>
-
+<h3>Healthcare Workforce & Burnout Analytics</h3>
 <p>
-Automated repayment processing for over <strong>4,000 individuals</strong>
-using Python + Pandas, eliminating manual review pipelines and saving
-thousands of administrative hours annually.
+Analyzes burnout risk among healthcare workers using workload, role, and stress
+indicators. Designed for remote healthcare ops teams.
 </p>
-
 <div class="meta">
-<span class="tag">Python</span>
-<span class="tag">Pandas</span>
-<span class="tag">Automation</span>
-<span class="tag">Healthcare</span>
+<span class="tag">SQL</span><span class="tag">Excel</span>
+<span class="tag">Power BI</span>
 </div>
-
-<div style="margin-top:18px">
-<a class="btn" href="https://github.com/austinstewartmsda-stack/Medicaid-Repayment-Automation">View Case Study</a>
-</div>
-
+<a class="btn primary" href="https://github.com/austinstewartmsda-stack/healthcare-burnout-analytics">View Code</a>
 </div>
 
 <div class="card">
-
-<span class="badgeRestricted">🔒 Code Restricted</span>
-
-<h3>50-Year Data Digitization & Snowflake Migration</h3>
-
+<h3>Public Health Resource Allocation & Outcomes</h3>
 <p>
-Cleaned, normalized, and migrated <strong>50+ years</strong> of Medicaid
-records from CSV files and scanned paper archives into a Snowflake
-cloud warehouse using SQL and Python.
+Policy-focused analysis of healthcare access and outcomes across regions,
+highlighting equity gaps and investment priorities.
 </p>
-
 <div class="meta">
-<span class="tag">Snowflake</span>
-<span class="tag">SQL</span>
-<span class="tag">Python</span>
-<span class="tag">ETL</span>
+<span class="tag">SQL</span><span class="tag">Power BI</span>
+<span class="tag">Public Health</span>
 </div>
-
-<div style="margin-top:18px">
-<a class="btn" href="https://github.com/austinstewartmsda-stack/50-Year-Data-Digitization-Snowflake-Migration">View Case Study</a>
-</div>
-
-</div>
-
-<div class="card">
-
-<span class="badgeRestricted">🔒 Code Restricted</span>
-
-<h3>ServiceNow PDF Automation Engine</h3>
-
-<p>
-Built automated PDF-generation workflows inside ServiceNow to replace
-manual form processing across multiple departments turning
-error-prone clerical work into instant automation.
-</p>
-
-<div class="meta">
-<span class="tag">ServiceNow</span>
-<span class="tag">PDF Automation</span>
-<span class="tag">Workflow</span>
-<span class="tag">GovTech</span>
-</div>
-
-<div style="margin-top:18px">
-<a class="btn" href="https://github.com/austinstewartmsda-stack/ServiceNow-PDF-Automation-Engine">View Case Study</a>
-</div>
-
+<a class="btn primary" href="https://github.com/austinstewartmsda-stack/public-health-resource-allocation">View Code</a>
 </div>
 
 </div>
 </section>
 
-
-
-<section id="contact">
-<h2 class="sectionTitle">Contact</h2>
-
-<div class="grid">
-
-<div class="card">📍 Helena, Montana</div>
-<div class="card">📧 austin.stewart.msda@gmail.com</div>
-<div class="card">
-🔗
-<a href="https://www.linkedin.com/in/austin-stewart-msda-6a26741a8/">LinkedIn</a>
-•
-<a href="https://github.com/austinstewartmsda-stack">GitHub</a>
-</div>
-
-</div>
-</section>
-
-<footer>
-© <span id="year"></span> Austin Stewart 
-</footer>
+<footer>© <span id="year"></span> Austin Stewart</footer>
 
 </div>
 
 <script>
-
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("visible")
-}
-})
-},{threshold:.15})
-
-document.querySelectorAll(".card").forEach(card=>{
-card.classList.add("reveal");
-observer.observe(card);
-});
-
 document.getElementById("year").textContent=new Date().getFullYear();
-
 </script>
 
 </body>
