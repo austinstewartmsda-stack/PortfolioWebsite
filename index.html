@@ -15,7 +15,6 @@ content="Austin Stewart #1 SQL Worldwide, Health Analytics and Automation. Pytho
 
 <style>
 :root{
---bg:#050814;
 --glass:rgba(255,255,255,.09);
 --border:rgba(255,255,255,.16);
 --text:#eef3ff;
@@ -45,7 +44,7 @@ margin:auto;
 padding:50px 24px 90px;
 }
 
-/* HERO */
+
 .heroCard{
 backdrop-filter:blur(28px);
 background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03));
@@ -120,7 +119,7 @@ background:linear-gradient(120deg,var(--accent),var(--accent2));
 color:#02131f;
 }
 
-/* STATS */
+
 .stats{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -141,7 +140,7 @@ font-size:40px;
 display:block;
 }
 
-/* SECTIONS */
+
 section{margin-top:90px}
 
 .sectionTitle{
@@ -155,7 +154,7 @@ grid-template-columns:repeat(3,1fr);
 gap:28px;
 }
 
-/* CARDS */
+
 .card{
 background:var(--glass);
 border:1px solid var(--border);
@@ -173,7 +172,7 @@ border-color:var(--accent);
 }
 
 .meta{
-margin-top:auto;
+margin-top:16px;
 display:flex;
 gap:10px;
 flex-wrap:wrap;
@@ -187,9 +186,10 @@ border:1px solid var(--border);
 }
 
 .cardActions{
+margin-top:auto;
+padding-top:20px;
 display:flex;
 gap:12px;
-margin-top:22px;
 flex-wrap:wrap;
 }
 
@@ -204,12 +204,12 @@ display:inline-block;
 margin-bottom:12px;
 }
 
-/* OPEN PROJECT VISUAL DIFFERENCE */
+
 #open-projects .card{
 border-color:rgba(74,255,192,.35);
 }
 
-/* FOOTER */
+
 footer{
 margin-top:110px;
 text-align:center;
@@ -229,9 +229,9 @@ padding-top:26px;
 <body>
 <div class="wrap">
 
-<!-- HERO -->
+
 <div class="heroCard">
-<img src="BannerImage.jpg" class="heroImage">
+<img src="BannerImage.jpg" class="heroImage" alt="Banner">
 
 <div class="kicker"><span class="dot"></span>Health Analytics • Automation • #1 SQL Worldwide</div>
 
@@ -256,7 +256,7 @@ on HackerRank.
 </div>
 </div>
 
-<!-- RESTRICTED PROJECTS -->
+
 <section id="projects">
 <h2 class="sectionTitle">Featured Healthcare Automation Projects</h2>
 
@@ -301,7 +301,7 @@ on HackerRank.
 </div>
 </section>
 
-<!-- OPEN PROJECTS -->
+
 <section id="open-projects">
 <h2 class="sectionTitle">Open-Source Healthcare Analytics Projects</h2>
 
@@ -311,11 +311,10 @@ on HackerRank.
 <h3>Healthcare Workforce & Burnout Analytics</h3>
 <p>
 Analyzes burnout risk across healthcare roles using workload, experience,
-stress, and sleep indicators. Designed for remote operations teams.
+stress, and sleep indicators.
 </p>
 <div class="meta">
-<span class="tag">SQL</span><span class="tag">Excel</span>
-<span class="tag">Power BI</span>
+<span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power BI</span>
 </div>
 <div class="cardActions">
 <a class="btn primary" href="https://github.com/austinstewartmsda-stack/healthcare-burnout-analytics">View Code</a>
@@ -326,12 +325,10 @@ stress, and sleep indicators. Designed for remote operations teams.
 <div class="card">
 <h3>Public Health Resource Allocation & Outcomes</h3>
 <p>
-Policy-focused analysis examining healthcare access and outcomes across regions
-to identify equity gaps and investment priorities.
+Policy-focused analysis examining healthcare access and outcomes across regions.
 </p>
 <div class="meta">
-<span class="tag">SQL</span><span class="tag">Power BI</span>
-<span class="tag">Public Health</span>
+<span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Public Health</span>
 </div>
 <div class="cardActions">
 <a class="btn primary" href="https://github.com/austinstewartmsda-stack/public-health-resource-allocation">View Code</a>
