@@ -51,28 +51,32 @@ margin-bottom:90px;
 
 .heroEkg{
 position:absolute;
-inset:-160px;
+inset:-180px;
 z-index:-1;
 pointer-events:none;
 
-opacity:.8;
+opacity:1;
 
 background-repeat:no-repeat;
-background-size:160% 100%;
+background-size:180% 100%;
 
 filter:
-drop-shadow(0 0 18px rgba(106,169,255,.7))
-drop-shadow(0 0 30px rgba(74,255,192,.6));
+drop-shadow(0 0 25px rgba(0,255,255,.9))
+drop-shadow(0 0 45px rgba(0,180,255,.85))
+drop-shadow(0 0 80px rgba(0,120,255,.75));
 
-animation:ekgFloat 18s linear infinite, ekgPulse 4.2s ease-in-out infinite;
+animation:ekgFloat 14s linear infinite, ekgPulse 3s ease-in-out infinite;
 
 background-image:url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300'>\
-<g fill='none' stroke='rgba(106,169,255,0.98)' stroke-width='3'>\
-<path d='M0 160 L120 160 L150 80 L190 240 L230 160 L420 160 L450 60 L490 260 L530 160 L740 160 L770 90 L810 230 L850 160 L1100 160'/>\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 320'>\
+<g fill='none' stroke='rgba(0,255,255,1)' stroke-width='4'>\
+<path d='M0 170 L130 170 L170 60 L210 280 L250 170 L460 170 L500 50 L540 290 L580 170 L820 170 L860 80 L900 260 L940 170 L1280 170'/>\
 </g>\
-<g fill='none' stroke='rgba(74,255,192,0.9)' stroke-width='2.6' transform='translate(0 40)'>\
-<path d='M0 160 L140 160 L170 90 L210 230 L250 160 L460 160 L500 70 L540 250 L580 160 L760 160 L790 110 L830 210 L870 160 L1100 160'/>\
+<g fill='none' stroke='rgba(0,180,255,0.95)' stroke-width='3.5' transform='translate(0 42)'>\
+<path d='M0 170 L150 170 L190 70 L230 270 L270 170 L500 170 L540 60 L580 280 L620 170 L880 170 L920 100 L960 240 L1000 170 L1280 170'/>\
+</g>\
+<g fill='none' stroke='rgba(80,120,255,0.9)' stroke-width='3' transform='translate(0 82)'>\
+<path d='M0 170 L170 170 L210 90 L250 250 L290 170 L540 170 L580 80 L620 260 L660 170 L940 170 L980 120 L1020 220 L1060 170 L1280 170'/>\
 </g>\
 </svg>");
 }
@@ -83,8 +87,8 @@ background-image:url("data:image/svg+xml;utf8,\
 }
 
 @keyframes ekgPulse{
-0%,100%{opacity:.6}
-50%{opacity:.9}
+0%,100%{opacity:.85}
+50%{opacity:1}
 }
 
 .heroCard{
