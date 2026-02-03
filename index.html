@@ -54,17 +54,24 @@ position:absolute;
 inset:-160px;
 z-index:-1;
 pointer-events:none;
-opacity:.35;
+
+opacity:.8;
+
 background-repeat:no-repeat;
-background-size:140% 100%;
-filter:blur(.5px);
-animation:ekgFloat 24s linear infinite, ekgPulse 6s ease-in-out infinite;
+background-size:160% 100%;
+
+filter:
+drop-shadow(0 0 18px rgba(106,169,255,.7))
+drop-shadow(0 0 30px rgba(74,255,192,.6));
+
+animation:ekgFloat 18s linear infinite, ekgPulse 4.2s ease-in-out infinite;
+
 background-image:url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300'>\
-<g fill='none' stroke='rgba(106,169,255,0.55)' stroke-width='2'>\
+<g fill='none' stroke='rgba(106,169,255,0.98)' stroke-width='3'>\
 <path d='M0 160 L120 160 L150 80 L190 240 L230 160 L420 160 L450 60 L490 260 L530 160 L740 160 L770 90 L810 230 L850 160 L1100 160'/>\
 </g>\
-<g fill='none' stroke='rgba(74,255,192,0.45)' stroke-width='1.6' transform='translate(0 40)'>\
+<g fill='none' stroke='rgba(74,255,192,0.9)' stroke-width='2.6' transform='translate(0 40)'>\
 <path d='M0 160 L140 160 L170 90 L210 230 L250 160 L460 160 L500 70 L540 250 L580 160 L760 160 L790 110 L830 210 L870 160 L1100 160'/>\
 </g>\
 </svg>");
@@ -76,8 +83,8 @@ background-image:url("data:image/svg+xml;utf8,\
 }
 
 @keyframes ekgPulse{
-0%,100%{opacity:.22}
-50%{opacity:.45}
+0%,100%{opacity:.6}
+50%{opacity:.9}
 }
 
 .heroCard{
