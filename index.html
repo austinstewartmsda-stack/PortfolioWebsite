@@ -44,6 +44,41 @@ margin:auto;
 padding:50px 24px 90px;
 }
 
+.heroWrapper{
+position:relative;
+margin-bottom:90px;
+}
+
+.heroEkg{
+position:absolute;
+inset:-160px;
+z-index:-1;
+pointer-events:none;
+opacity:.35;
+background-repeat:no-repeat;
+background-size:140% 100%;
+filter:blur(.5px);
+animation:ekgFloat 24s linear infinite, ekgPulse 6s ease-in-out infinite;
+background-image:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300'>\
+<g fill='none' stroke='rgba(106,169,255,0.55)' stroke-width='2'>\
+<path d='M0 160 L120 160 L150 80 L190 240 L230 160 L420 160 L450 60 L490 260 L530 160 L740 160 L770 90 L810 230 L850 160 L1100 160'/>\
+</g>\
+<g fill='none' stroke='rgba(74,255,192,0.45)' stroke-width='1.6' transform='translate(0 40)'>\
+<path d='M0 160 L140 160 L170 90 L210 230 L250 160 L460 160 L500 70 L540 250 L580 160 L760 160 L790 110 L830 210 L870 160 L1100 160'/>\
+</g>\
+</svg>");
+}
+
+@keyframes ekgFloat{
+0%{background-position:0% 50%}
+100%{background-position:100% 50%}
+}
+
+@keyframes ekgPulse{
+0%,100%{opacity:.22}
+50%{opacity:.45}
+}
 
 .heroCard{
 backdrop-filter:blur(28px);
@@ -119,7 +154,6 @@ background:linear-gradient(120deg,var(--accent),var(--accent2));
 color:#02131f;
 }
 
-
 .stats{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -140,7 +174,6 @@ font-size:40px;
 display:block;
 }
 
-
 section{margin-top:90px}
 
 .sectionTitle{
@@ -153,7 +186,6 @@ display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:28px;
 }
-
 
 .card{
 background:var(--glass);
@@ -204,11 +236,9 @@ display:inline-block;
 margin-bottom:12px;
 }
 
-
 #open-projects .card{
 border-color:rgba(74,255,192,.35);
 }
-
 
 footer{
 margin-top:110px;
@@ -229,11 +259,17 @@ padding-top:26px;
 <body>
 <div class="wrap">
 
+<div class="heroWrapper">
+
+<div class="heroEkg"></div>
 
 <div class="heroCard">
-<img src="BannerImage.jpg" class="heroImage" alt="Banner">
+
+<div class="kicker">Interested in computational data analytics for the healthcare and public health sector</div>
 
 <div class="kicker"><span class="dot"></span>Health Analytics • Automation • #1 SQL Worldwide</div>
+
+<img src="BannerImage.jpg" class="heroImage" alt="Banner">
 
 <h1>Austin Stewart, MSDA</h1>
 
@@ -254,8 +290,9 @@ on HackerRank.
 <div class="stat"><strong>50+</strong>Years Digitized</div>
 <div class="stat"><strong>1000s</strong>Hours Saved</div>
 </div>
-</div>
 
+</div>
+</div>
 
 <section id="projects">
 <h2 class="sectionTitle">Featured Healthcare Automation Projects</h2>
@@ -314,8 +351,6 @@ View Case Study
 </div>
 </section>
 
-
-
 <section id="open-projects">
 <h2 class="sectionTitle">Open-Source Healthcare Analytics Projects</h2>
 
@@ -361,19 +396,19 @@ and executive-interpretable metrics rather than hospital-level attribution.
 </p>
 
 <div class="meta">
-  <span class="tag">SQL Server</span>
-  <span class="tag">Excel</span>
-  <span class="tag">Power BI</span>
-  <span class="tag">Time-Series</span>
+<span class="tag">SQL Server</span>
+<span class="tag">Excel</span>
+<span class="tag">Power BI</span>
+<span class="tag">Time-Series</span>
 </div>
 
 <div class="cardActions">
-  <a class="btn primary" href="https://github.com/austinstewartmsda-stack/Medical-Readmission-Project/tree/main">
-    View Code
-  </a>
-  <a class="btn" href="medicare-readmission-case-study.html">
-    View Case Study
-  </a>
+<a class="btn primary" href="https://github.com/austinstewartmsda-stack/Medical-Readmission-Project/tree/main">
+View Code
+</a>
+<a class="btn" href="medicare-readmission-case-study.html">
+View Case Study
+</a>
 </div>
 
 </div>
